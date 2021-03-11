@@ -80,13 +80,13 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("killswitch"))
         {
             Debug.Log("killreset");
-            gameObject.GetComponent<gameState>().ResetCurrentSceen();
+            gameObject.GetComponent<gameState>().ResetCurrentScene();
         }
 
         if (collision.CompareTag("goal"))
         {
             Debug.Log("killreset");
-            gameObject.GetComponent<gameState>().ResetCurrentSceen();
+            gameObject.GetComponent<gameState>().NextScene();
         }
 
         if (collision.CompareTag("fake"))
@@ -94,6 +94,13 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("fake found");
             gameObject.GetComponent<gameState>().ChangeHudText("fake");
             fakeHidden = false;
+        }
+
+        if (collision.CompareTag("sideBoost"))
+        {
+            Debug.Log("fake found");
+            //gameObject.GetComponent<gameState>().ChangeHudText("fake");
+            //fakeHidden = false;
         }
     }
 

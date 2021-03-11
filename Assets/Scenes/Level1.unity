@@ -2513,7 +2513,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hidden - 1
+  m_text: 'Hidden - 1
+
+    1 <Level> 2
+
+    r to reset'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1369ee23a7b8eb34b81cca05f48347a7, type: 2}
   m_sharedMaterial: {fileID: 6794229305437851897, guid: 1369ee23a7b8eb34b81cca05f48347a7,

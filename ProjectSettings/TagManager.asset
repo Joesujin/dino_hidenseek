@@ -9,6 +9,7 @@ TagManager:
   - killswitch
   - goal
   - fake
+  - sideBoost
   layers:
   - Default
   - TransparentFX

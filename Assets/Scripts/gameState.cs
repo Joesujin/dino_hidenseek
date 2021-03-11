@@ -24,11 +24,21 @@ public class gameState : MonoBehaviour
     {
         if (Input.GetButtonDown("reset"))
         {
-            ResetCurrentSceen();
+            ResetCurrentScene();
+        }
+
+        if (Input.GetButton("nextlevel"))
+        {
+            NextScene();
+        }
+
+        if (Input.GetButton("previouslevel"))
+        {
+            PreviousScene();
         }
     }
 
-    public void ResetCurrentSceen()
+    public void ResetCurrentScene()
     {
         SceneManager.LoadScene(currentScene.buildIndex, LoadSceneMode.Single);       
     }
@@ -36,6 +46,16 @@ public class gameState : MonoBehaviour
     public void ChangeHudText(string hudtext)
     {
         hudText.text = hudtext;
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(currentScene.buildIndex + 1, LoadSceneMode.Single);
+    }
+
+    public void PreviousScene()
+    {
+        SceneManager.LoadScene(currentScene.buildIndex - 1, LoadSceneMode.Single);
     }
 }
 
